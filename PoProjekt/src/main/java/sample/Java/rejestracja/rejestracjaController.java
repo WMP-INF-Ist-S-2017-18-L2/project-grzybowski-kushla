@@ -65,6 +65,7 @@ public class rejestracjaController implements Initializable {
         pstmt.setString(10, miastoGet);
         pstmt.setInt(11, nrdomuGet);
         pstmt.setInt(12, nrmieszkaniaGet);
+
         pstmt.execute();
 
         conn.close();

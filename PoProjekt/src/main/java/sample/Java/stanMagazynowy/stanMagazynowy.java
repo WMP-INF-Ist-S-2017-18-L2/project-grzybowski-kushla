@@ -13,18 +13,29 @@ public abstract class stanMagazynowy {
 
     public stanMagazynowy() throws SQLException { }
 
-    public ObservableList<Map> getCustomerData() {
+    public ObservableList<Map> getCustomerData( String wybFiltr, String filtr) {
         ObservableList<Map> stMag = FXCollections.observableArrayList();
         try {
-            qc.setPs(qc.getConn().prepareStatement("SELECT * FROM " + TABLE_NAME));
+
+            if((wybFiltr.length()==0) || (filtr.length()==0)) {
+
+                qc.setPs(qc.getConn().prepareStatement("SELECT * FROM " + TABLE_NAME));
+            }else{
+                System.out.println(filtr);
+                System.out.println(wybFiltr);
+                qc.setPs(qc.getConn().prepareStatement("SELECT * FROM " + TABLE_NAME + " WHERE " + wybFiltr + " LIKE '" + filtr +"'"));
+            }
+
             qc.setRs(qc.getPs().executeQuery());
             while (qc.getRs().next()) {
-                Map<String, String> product = new HashMap<>();
+                Map<String, String> towar = new HashMap<>();
                 //product.put("id", String.valueOf(qc.getRs().getInt("id")));
-                product.put("kod_towaru", qc.getRs().getString("kod_towaru"));
-                product.put("nazwa", qc.getRs().getString("nazwa"));
-                product.put("miejsce", qc.getRs().getString("miejsce"));
-                stMag.add(product);
+                towar.put("kodTowaru", qc.getRs().getString("kod_towaru"));
+                towar.put("nazwa", qc.getRs().getString("nazwa"));
+                towar.put("miejsce", qc.getRs().getString("miejsce"));
+                towar.put("ilosc", qc.getRs().getString("ilosc"));
+                stMag.add(towar);
+
             }
             return stMag;
         } catch (SQLException ex) {

@@ -53,6 +53,6 @@
       <TextField fx:id="dzien_ur" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="35.0" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
       <ChoiceBox fx:id="miesiacBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="85.0" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
       <TextField fx:id="rok_ur" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
-      <Button fx:id="wroc" mnemonicParsing="false" onAction="#menuWroc" text="Wróć" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+      <Button fx:id="wroc" mnemonicParsing="false" text="Wróć" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
    </children>
 </GridPane>
