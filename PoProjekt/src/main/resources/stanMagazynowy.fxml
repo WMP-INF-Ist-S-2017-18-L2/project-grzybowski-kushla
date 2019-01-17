@@ -37,7 +37,7 @@
             <Button fx:id="skasuj" mnemonicParsing="false" onAction="#menuSkasuj" prefHeight="25.0" prefWidth="65.0" text="Skasuj" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
             <Button fx:id="wroc" mnemonicParsing="false" onAction="#menuWroc" prefHeight="25.0" prefWidth="65.0" text="Wróć" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
             <Button fx:id="dodaj" mnemonicParsing="false" onAction="#menuDodaj" prefWidth="65.0" text="Dodaj" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-            <Button fx:id="edytuj" mnemonicParsing="false" prefWidth="65.0" text="Edytuj" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Button fx:id="edytuj" mnemonicParsing="false" onAction="#menuEdytuj" prefWidth="65.0" text="Edytuj" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
             <Button fx:id="odswiez" mnemonicParsing="false" onAction="#menuOdswiez" prefWidth="65.0" text="Odśwież" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
          </children>
       </GridPane>

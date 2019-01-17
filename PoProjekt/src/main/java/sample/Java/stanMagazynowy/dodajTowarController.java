@@ -27,6 +27,7 @@ public class dodajTowarController {
     ResultSet rs;
     public int pIlosc;
     public int pId;
+    public String pNazwa;
 
 
     public void menuCzysc(ActionEvent actionEvent) {
@@ -47,7 +48,7 @@ public class dodajTowarController {
         String sqlInsert = "INSERT INTO stanmagazynowy(kod_towaru, nazwa, miejsce, ilosc) VALUES (?, ?, ?, ?);";
         PreparedStatement psSelect = conn.prepareStatement(sqlSelect);
         rs=psSelect.executeQuery();
-        System.out.println(rs);
+//        System.out.println(rs.getInt("id"));
         if(rs.next()){
             pIlosc = rs.getInt("ilosc");
             pId = rs.getInt("id");
@@ -59,7 +60,12 @@ public class dodajTowarController {
 
             //System.out.println(pId+"|"+pIlosc);
         }else{
-
+            sqlSelect = ("SELECT * FROM stanmagazynowy WHERE kod_towaru='"+sKodTowaru+"'");
+            psSelect = conn.prepareStatement(sqlSelect);
+            rs=psSelect.executeQuery();
+            rs.next();
+            pNazwa=rs.getString("nazwa");
+        if(pNazwa.equals(sNazwaTowaru)){
         PreparedStatement pstmt = conn.prepareStatement(sqlInsert);
 
         pstmt.setString(1, sKodTowaru);
@@ -75,6 +81,10 @@ public class dodajTowarController {
         }
 
         conn.close();
+            }else{
+                JOptionPane.showMessageDialog(null, "Towar pod kodem: "+sKodTowaru+" istnieje pod inna nazwą!");
+            }
+
 
 
     }}

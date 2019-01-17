@@ -22,19 +22,20 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
       <TextField fx:id="login" GridPane.columnIndex="1" />
       <TextField fx:id="haslo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <TextField fx:id="pHaslo" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <TextField fx:id="imie" GridPane.columnIndex="4" />
       <TextField fx:id="nazwisko" GridPane.columnIndex="4" GridPane.rowIndex="1" />
       <TextField fx:id="pesel" GridPane.columnIndex="4" GridPane.rowIndex="2" />
       <TextField fx:id="miasto" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-      <TextField fx:id="nrdomu" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-      <TextField fx:id="nrmieszkania" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+      <TextField fx:id="nrdomu" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+      <TextField fx:id="nrmieszkania" GridPane.columnIndex="4" GridPane.rowIndex="7" />
       <ChoiceBox fx:id="stanowiskoBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
       <Label text="Login" GridPane.halignment="RIGHT" />
       <Label text="Haslo" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
@@ -44,15 +45,17 @@
       <Label text="Nazwisko" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
       <Label text="PESEL" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
       <Label text="Miasto" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
-      <Label text="Numer domu" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
-      <Label text="Numer mieszkania" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
-      <Button mnemonicParsing="false" onAction="#buttonRejestracja" text="Rejestruj" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+      <Label text="Numer domu" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+      <Label text="Numer mieszkania" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
+      <Button mnemonicParsing="false" onAction="#buttonRejestracja" text="Rejestruj" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
       <Label alignment="CENTER" text="Dzień" GridPane.columnIndex="3" GridPane.rowIndex="3" GridPane.valignment="TOP" />
       <Label text="Miesiąc" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="TOP" />
       <Label text="Rok" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP" />
       <TextField fx:id="dzien_ur" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="35.0" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
       <ChoiceBox fx:id="miesiacBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="85.0" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
       <TextField fx:id="rok_ur" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
-      <Button fx:id="wroc" mnemonicParsing="false" text="Wróć" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+      <Button fx:id="wroc" mnemonicParsing="false" text="Wróć" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+      <Label text="Ulica / Aleja" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+      <TextField fx:id="ulica" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
    </children>
 </GridPane>

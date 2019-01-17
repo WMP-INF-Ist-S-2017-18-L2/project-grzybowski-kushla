@@ -40,5 +40,6 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }{}
-    //TODO Poprawic dodawanie i rejestracje, warunki
+    //TODO Lista pracownikow, edycja, kasowanie
+    //TODO Składanie zamówień, lista zamówień
 }
